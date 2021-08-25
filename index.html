@@ -13,13 +13,42 @@ body{
     font-family: 'Rubik', sans-serif;
     background-color: #F8F8F8;
 }
+h1{
+    color:#0b132a;
+    font-size: 48px;
+    font-weight: 500;
+}
+ul{
+    list-style-image:url('Tick.png');
+    color: #4F5665;
+}
+h2{
+    color:#0b132a;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 45px;
+}
+p{
+    color:#4F5665;
+    line-height: 30px;
+}
+span{
+    font-weight: 500;
+}
+h3{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #0B132A;
+}
 .flex-container {
     display: flex;
     background-color: #F8F8F8;
     justify-content: space-around;
     width: 100%;
-    /* padding-right:5%;
-    padding-left:5%; */
+    padding-right:5%;
+    padding-left:5%;
 }
 .flex-container > div {
     background-color: #F8F8F8;
@@ -56,7 +85,10 @@ body{
     text-align: center;
     padding: 10px 20px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 16px;
+    line-height: 19px;
+    font-style: normal;
+    font-weight: normal;
 }
 .topnav .button {
     background-color: #F8F8F8;
@@ -76,11 +108,7 @@ body{
 .topnav .icon {
     display: none;
 }
-h1{
-    color:#0b132a;
-    font-size: 48px;
-    font-weight: 500;
-}
+
 .btnStart{
     background-color: #f53855;
     height:60px;
@@ -96,16 +124,8 @@ h1{
     font-weight: bold;
     box-shadow: 0px 15px 15px -5px rgba(245, 56, 85,0.5);
 }
-.card-container{
-    background-color: #F8F8F8;
-    align-items: center;
-    width:100%;
-}
-.column {
-    float: left;
-    width: 33%;
-    padding: 0 10px;
-}
+
+
 .flex-banner .banner-left{
     display: flex;
     flex-direction: column;
@@ -117,26 +137,34 @@ h1{
     flex:0.6;
 }
 
+.card-container{
+    background-color: #F8F8F8;
+    align-items: center;
+    width:100%;
+}
+
 /* Remove extra left and right margins, due to padding */
 .row {
-	margin: 0 -5px;
     background-color: #ffffff;
     margin-left: 10%;
     margin-right: 10%;
     width:80%;
 }
+.column {
+    float: left;
+    width: 33%;
+}
 
 /* Clear floats after the columns */
 .row:after {
     content: "";
-    display: table;
+    display: flex;
     clear: both;
 }
 /* Style the counter cards */
 .card {
-    
-    padding: 1px;
-    text-align: center;
+    flex-direction: row;
+    text-align: start;
     background-color: #ffffff;
     border-right:1px solid #eeeff2;
     display:flex;
@@ -147,17 +175,19 @@ h1{
 
 .Features{
     display:flex;
-    width:70%;
+    width:80%;
     justify-content: space-between;
     align-items: center;
-    align-self: center;
-    align-content: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4%;
+    margin-top: 5%;
 }
-ul{
-    list-style-image:url('Tick.png');
+.FtrTxt{
+    display: flex;
+    flex-direction: column;
+}
+.Features .FtrTxt > ul > li{
+    margin-bottom: 30px;
 }
 
 .plan{
@@ -166,7 +196,7 @@ ul{
 .plan h2 
 {
     font-size: 35px;
-    font-weight: 400;
+    font-weight: 500;
     color: #0b132a;
     font-family: 'Rubik', sans-serif;
 }
@@ -201,7 +231,6 @@ ul{
     justify-content: space-around;
     padding-bottom: 3%;
 }
-
 .price {
     list-style-image: url("VectorTick.png");
     margin: 0;
@@ -227,16 +256,6 @@ ul{
     border-radius: 50px;
 }
 
-.buttonPremium {
-    background-color: #f53838;
-    color: #fff;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 50px;
-    box-shadow: solid rgba(245, 56, 56, 0.35);
-}
 
 .columnsPrice h3{
     font-weight: 500;
@@ -244,8 +263,69 @@ ul{
     color: #0b132a;
     text-align: center;
 }
-.columnsPrice:hover {
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+.columnsPrice:hover{
+    border: 2px solid #f53838;
+}
+.columnsPrice .buttonPrice:hover{
+    background-color: #f53838;
+    color: white;
+}
+.map
+{
+    text-align: center;
+    margin-top: 100px;
+    padding-left:10%;
+    padding-right:10%;
+}
+.group{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    padding-left:9%;
+    padding-right:9%;
+    align-items: center;
+
+}
+.group > img{
+    height:70px;
+    width:180px;
+}
+.group .amazon{
+    height:208px;
+    width:277px;
+}
+.bottom{
+    background-color: #f8f8f8;
+    width:100%;
+}
+.subscribe{
+    background-color: #ffffff;
+    width:80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+}
+.footer{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    margin-left: 10%;
+    justify-content: space-between;
+}
+.footer .col1 .social{
+    display: flex;
+    flex-direction: row;
+    margin-left: -20px;
+}
+.footer .col1 .copyright{
+    color:#AFB5C0;
+    margin-left: 20px;
 }
 
 
@@ -276,6 +356,7 @@ ul{
         flex-direction: column;
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -293,6 +374,9 @@ ul{
     h1{
         font-size: 30px;
     }
+    h2{
+        font-size: 25px;
+    }
 }
 @media screen and (max-width: 600px) {
     .column {
@@ -305,6 +389,23 @@ ul{
         align-self: center;
         justify-content: center;
         margin:0;
+    }
+    .group{
+        flex-direction: column;
+    }
+    .subscribe{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .btnStart{
+        height:40px;
+        width:150px;
+    }
+    .footer{
+        flex-direction: column;
+        width:100%;
+        margin-top: 20px;
     }
 }
 </style>
@@ -345,7 +446,7 @@ ul{
         <div class="column">
             <div class="card">
                 <img src="user.png">
-                <div style="display: flex;flex-direction: column;text-align: start;margin-left: 10px;">
+                <div>
                     <h3>90K+</h3>
                     <p>Satisfied<br>Customers</p>
                 </div>
@@ -375,7 +476,7 @@ ul{
     <div>
         <img class="responsive" src="Illustration_2.png"/>
     </div>
-    <div style="display: flex;flex-direction: column;">
+    <div class="FtrTxt">
         <h2>We Provide Many <br>Features You Can Use</h2>
         <p>You can explore the features that we provide with fun and<br>have their own functions each feature.</p>
             <ul>
@@ -395,7 +496,7 @@ ul{
     <p>Let's choose the package that is best for you and explore it happily and <br>cheerfully.</p>
 </div>
 <div class="priceCard">
-<div class="columnsPrice">
+<div id="Free" class="columnsPrice">
     <img src="Free.png">
     <h3>Free Plan</h3>
     <ul class="price">
@@ -408,7 +509,7 @@ ul{
     <a href="#" class="buttonPrice">Select</a>
 </div>
 
-<div class="columnsPrice">
+<div id="Standard" class="columnsPrice">
     <img src="Standard.png">
     <h3>Standard Plan</h3>
     <ul class="price">    
@@ -422,7 +523,7 @@ ul{
     <a href="#" class="buttonPrice">Select</a>
 </div>
 
-<div class="columnsPrice">
+<div id="Premium" class="columnsPrice">
     <img src="Premium.png">
     <h3>Premium Plan</h3>
     <ul class="price">
@@ -434,7 +535,7 @@ ul{
         <li>Hooks for Manual steps</li>
     </ul>
     <h3>$12 / <span style="color: grey;">mo</span></h3>
-    <a href="#" class="buttonPremium">Select</a>
+    <a href="#" class="buttonPrice">Select</a>
 </div>
 </div>
 
@@ -442,15 +543,75 @@ ul{
     <h2>Huge Global Network of<br>Specialized Workforce</h2>
     <p>See MaxCX everywhere to make it easier for you for your customers<br>around the globe.</p>
 </div>
+<div class="map">
+    <img class="responsive" src="map.png" >
+</div>
+
+<div class="group">
+    <img src="Mask Group.png"/>
+    <img src="Mask Group1.png"/>
+    <img class="amazon" src="Mask Group2.png"/>
+    <img src="Mask Group3.png"/>
+    <img src="Mask Group4.png"/>
+</div>
+
+<div class="plan">
+    <h2>Trusted by Thousands of<br>Happy Customer</h2>
+    <p>These are the stories of our customers who have joined us with great<br>pleasure when using this crazy feature.</p>
+</div>
+<div class="bottom">
+    <div class="subscribe">
+        <div class="subtxt">
+            <h2>Subscribe Now & get<br>Special Features!</h2>
+            <p>Let's subscribe with us and find the fun.</p>
+        </div>
+        <button class="btnStart">Subscribe</button>
+    </div>
+    <div class="footer">
+        <div class="col1">
+            <img src="logo.png"/>
+            <p><span>Max<b>CX</b></span> is a private virtual network that has<br>unique features and has high security.</p>
+            <div class="social">
+                <img src="Facebook.png"/>
+                <img src="Twitter.png"/>
+                <img src="Instagram.png"/>
+            </div>
+            <p class="copyright" >©2020 MaxCX</p>
+        </div>
+        <div class="col2">
+            <h3>Product</h3>
+            <p>Download</p>
+            <p>Pricing</p>
+            <p>Locations</p>
+            <p>Services</p>
+            <p>Countries</p>
+            <p>Blog</p>
+        </div>
+        <div class="col3">
+            <h3>Engage</h3>
+            <p>MaxCX ?</p>
+            <p>FAQ</p>
+            <p>Explore</p>
+            <p>About Us</p>
+            <p>Privacy Policy</p>
+            <p>Terms Of Service</p>
+        </div>
+        <div class="col4">
+            <h3>Earn Money</h3>
+            <p>Affilate</p>
+            <p>Become partner</p>
+        </div>
+    </div>
+</div>
 <script>
-    // function myFunction() {
-    //     var x = document.getElementById("myTopnav");
-    //     if (x.className === "topnav") {
-    //         x.className += " responsive";
-    //     } else {
-    //         x.className = "topnav";
-    //     }
-    // }
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    } 
 </script>
 </body>
 </html>
